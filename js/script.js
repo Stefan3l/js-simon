@@ -53,27 +53,29 @@ const intervalID = setInterval(() => {
 
 let userNmb = [];
 let result = [];
+let message = "";
 
 btnElm.addEventListener(`click`, function(even) {
     even.preventDefault()
-    userNmb.push(numbOneElm.value)
-    userNmb.push(numbTwoElm.value)
-    userNmb.push(numbThreeElm.value)
-    userNmb.push(numbForElm.value)
-    userNmb.push(numbFiveElm.value)
-    console.log(userNmb)
+    userNmb.push(Number(numbOneElm.value))
+    userNmb.push(Number(numbTwoElm.value))
+    userNmb.push(Number(numbThreeElm.value))
+    userNmb.push(Number(numbForElm.value))
+    userNmb.push(Number(numbFiveElm.value))
+   
 
-    for( i = 0; i <= userNmb.length; i++) {
-        console.log(userNmb[i], numbCpuArray)
+    for( i = 0; i < userNmb.length; i++) {
+       
         if(numbCpuArray.includes(userNmb[i])) {
             result.push(userNmb[i])
-    
-            console.log("ciao")
-        }
-        console.log(result)
-    }
-})
 
+        }
+        message =`Hai indovinato  ${result.length} numeri! (${result})`
+        resultElm.innerHTML = message
+
+    }
+    console.log(result.length)
+})
 
 
 

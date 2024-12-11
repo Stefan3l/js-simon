@@ -28,6 +28,11 @@
     padding: 10px;
 }
 
+p {
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
 input {
     text-align: center;
     padding: 6px 0;
@@ -46,4 +51,11 @@ input {
     border: none;
     background-color: blue;
     color: #ffff;
+}
+
+#risultato {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
 }

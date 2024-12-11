@@ -20,7 +20,8 @@ const numbFiveElm = document.getElementById(`numb5`)
 
 
 
-let seconds = 5;
+
+let seconds = 30;
 let numbCpu = "";
 let numbCpuArray = []
 for ( i = 1; i <= 5; i++) {
@@ -53,7 +54,7 @@ const intervalID = setInterval(() => {
 
 let userNmb = [];
 let result = [];
-let message = "";
+
 
 btnElm.addEventListener(`click`, function(even) {
     even.preventDefault()
@@ -64,17 +65,18 @@ btnElm.addEventListener(`click`, function(even) {
     userNmb.push(Number(numbFiveElm.value))
    
 
+let message;
+
     for( i = 0; i < userNmb.length; i++) {
-       
+        
         if(numbCpuArray.includes(userNmb[i])) {
             result.push(userNmb[i])
+            message =`Hai indovinato  ${result.length} numeri! (${result})`
+            resultElm.innerHTML = message           
+        }  
+           
+    }    
 
-        }
-        message =`Hai indovinato  ${result.length} numeri! (${result})`
-        resultElm.innerHTML = message
-
-    }
-    console.log(result.length)
 })
 
 
@@ -82,3 +84,25 @@ btnElm.addEventListener(`click`, function(even) {
 
 
 
+
+
+// var duration = 15 * 1000;
+// var animationEnd = Date.now() + duration;
+// var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+// function randomInRange(min, max) {
+// return Math.random() * (max - min) + min;
+// }
+
+// var interval = setInterval(function() {
+// var timeLeft = animationEnd - Date.now();
+
+// if (timeLeft <= 0) {
+//     return clearInterval(interval);
+// }
+
+// var particleCount = 50 * (timeLeft / duration);
+// // since particles fall down, start a bit higher than random
+// confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
+// confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+// }, 250);

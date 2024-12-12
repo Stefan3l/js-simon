@@ -22,7 +22,7 @@ const formNumbElms = document.getElementById("form-numbers")
 
 
 
-let seconds = 5;
+let seconds = 30;
 let numbCpu = "";
 let numbCpuArray = []
 for ( i = 1; i <= 5; i++) {

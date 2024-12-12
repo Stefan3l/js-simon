@@ -17,6 +17,7 @@ const numbTwoElm = document.getElementById(`numb2`)
 const numbThreeElm = document.getElementById(`numb3`)
 const numbForElm = document.getElementById(`numb4`)
 const numbFiveElm = document.getElementById(`numb5`)
+const formNumbElms = document.getElementById("form-numbers")
 
 
 
@@ -56,8 +57,8 @@ let userNmb = [];
 let result = [];
 
 
-btnElm.addEventListener("click", function(even) {
-    even.preventDefault()
+formNumbElms.addEventListener("submit", function(event) {
+    event.preventDefault()
     userNmb.push(Number(numbOneElm.value))
     userNmb.push(Number(numbTwoElm.value))
     userNmb.push(Number(numbThreeElm.value))

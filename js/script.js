@@ -56,7 +56,7 @@ let userNmb = [];
 let result = [];
 
 
-btnElm.addEventListener(`click`, function(even) {
+btnElm.addEventListener("click", function(even) {
     even.preventDefault()
     userNmb.push(Number(numbOneElm.value))
     userNmb.push(Number(numbTwoElm.value))
